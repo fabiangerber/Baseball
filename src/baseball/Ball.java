@@ -4,14 +4,14 @@ import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 
 public class Ball {
-	
-//	 public event EventHandler BallInPlay; 		//How to convert to Java??? 
 
-	public void OnBallInPlay(BallEventArgs e)
-    {
-//		EventHandler ballInPlay = BallInPlay;	// WHAAAT??? ball vs. Ball Whats the difference?
-//        if (ballInPlay != null) {
-//            ballInPlay(this, e);
-//        }
-    }
+	public EventHandler<ActionEvent> BallInPlay; // TODO is this correct?
+
+	public void OnBallInPlay(BallEventArgs e) {
+		// EventHandler ballInPlay = BallInPlay; // WHAAAT??? ball vs. Ball?
+		// if (ballInPlay != null) {
+		// ballInPlay(this, e); // Whats this?
+		// }
+	}
+
 }
