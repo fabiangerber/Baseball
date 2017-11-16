@@ -1,7 +1,7 @@
 package baseball;
 
-import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
 public class Ball {
 
