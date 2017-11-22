@@ -3,13 +3,27 @@ package baseball;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		System.out.println("Main here");
-		
-		// Hardcoded played ball
-		int distance = 100;
+
+		BaseballSimulator simulator = new BaseballSimulator();
+
+		// Catch ball
+		int distance = 60;
 		int trajectory = 30;
-		BaseballSimulator.PlayBall(distance, trajectory);
+		simulator.PlayBall(distance, trajectory);
+		System.out.println("\n");		
+
+		// Homerun
+		distance = 100;
+		trajectory = 50;
+		simulator.PlayBall(distance, trajectory);
+		System.out.println("\n");
+
+		// Homerun
+		distance = 440;
+		trajectory = 50;
+		simulator.PlayBall(distance, trajectory);
+		System.out.println("\n");
+
 	}
 
 }

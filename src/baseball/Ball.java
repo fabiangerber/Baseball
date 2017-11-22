@@ -1,17 +1,20 @@
 package baseball;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import java.util.Observable;
 
-public class Ball {
+public class Ball extends Observable {
 
-	public EventHandler<ActionEvent> BallInPlay; // TODO is this correct?
+	Ball() {
+		this.addObserver(new Pitcher());
+		this.addObserver(new Fan());
+	}
 
 	public void OnBallInPlay(BallEventArgs e) {
-		// EventHandler ballInPlay = BallInPlay; // WHAAAT??? ball vs. Ball?
-		// if (ballInPlay != null) {
-		// ballInPlay(this, e); // Whats this?
-		// }
+		if (countObservers() > 0) {
+			setChanged();
+			notifyObservers(e);
+		}
+
 	}
 
 }

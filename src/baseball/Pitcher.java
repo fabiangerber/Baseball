@@ -1,18 +1,24 @@
 package baseball;
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
+import java.util.Observer; 
 
-public class Pitcher implements EventHandler {
-	public Pitcher(Ball ball) {
-
-	}
+public class Pitcher implements Observer{
+//	public Pitcher(Ball ball) {
+//		ball.addObserver(this);
+//	}
 
 	@Override
-	public void handle(Event arg0) {
-		// TODO Auto-generated method stub
-//		if(arg0.getSource() == ball)
+	public void update(java.util.Observable o, Object arg) {
 
+		if (arg instanceof BallEventArgs) {
+			BallEventArgs ballEventArgs = (BallEventArgs) arg;
+			if ((ballEventArgs.distance < 95) && (ballEventArgs.trajectory < 60)) {
+				System.out.println("Pitcher: I caught the ball.");
+			}
+			else {
+				System.out.println("Pitcher: I covered first base.");
+			}
+		}
 	}
 
 }
