@@ -10,19 +10,19 @@ public class Main {
 		int distance = 60;
 		int trajectory = 30;
 		simulator.PlayBall(distance, trajectory);
-		System.out.println("\n");		
+		System.out.println("");		
 
 		// Homerun
 		distance = 100;
 		trajectory = 50;
 		simulator.PlayBall(distance, trajectory);
-		System.out.println("\n");
+		System.out.println("");
 
 		// Homerun
 		distance = 440;
 		trajectory = 50;
 		simulator.PlayBall(distance, trajectory);
-		System.out.println("\n");
+		System.out.println("");
 
 	}
 
